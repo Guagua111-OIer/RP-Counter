@@ -4,81 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport">
     <title>RP 计数器</title>
-    <style>
-        body {
-            min-height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #080830, #252559);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            line-height: 0.5;
-        }
-        .rpButton {
-            width: 200px;
-            height: 200px;
-            margin-top: 32px;
-            border: none;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #3a86ff, #9d4edd);
-            cursor: pointer;
-            font-size: 48px;
-            font-weight: bold;
-            color: white;
-            font-family: 'Segoe UI', 'Arial', sans-serif;
-            transition: all 0.2s;
-        }
-        .rpButton:hover {
-            width: 230px;
-            height: 230px;
-        }
-        .rpButton:active {
-            transform: scale(0.85);
-            background: linear-gradient(135deg, #3a86ff, #9d4edd);
-        }
-
-        .reset {
-            margin-top: 16px;
-            padding: 10px 20px;
-            background-color: #2a3636;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-            transition: all 0.2s;
-        }
-        .reset:hover {
-            background-color: #d42308;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>RP 计数器</h1>
     <p>点击增加你的 RP 值!</p>
+    <div class = 'dd'></div>
     <button id = "rpButton" class = "rpButton" onclick = "addRP()"></button>
     <button id = "reset" class = "reset" onclick = "resetRP()">重置</button>
-    
-    <script>
-        let rpCount = localStorage.getItem('rpCount') || 0;
-        document.getElementById('rpButton').textContent = rpCount;
-        function addRP() {
-            rpCount++;
-            localStorage.setItem('rpCount', rpCount);
-            document.getElementById('rpButton').textContent = rpCount;
-        }
-        function resetRP() {
-            //弹出确认对话框
-            if (!confirm('你确定要重置 RP 值吗？')) {
-                return;
-            }
-            rpCount = 0;
-            localStorage.setItem('rpCount', rpCount);
-            document.getElementById('rpButton').textContent = rpCount;
-        }
-    </script>
+    <script type = "text/javascript" src = "script.js"></script>
 </body>
 </html>
