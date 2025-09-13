@@ -1,0 +1,61 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    line-height: 0.5;
+}
+.dd {
+    background: radial-gradient(circle, #c2c2c2 1px, transparent 1px);
+    background-size: 10px 10px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+}
+.rpButton {
+    width: 200px;
+    height: 200px;
+    margin-top: 32px;
+    border: none;
+    border-radius: 50%;
+    background: rgb(2, 240, 2);
+    border: 10px solid black;
+    cursor: pointer;
+    font-size: 48px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Menlo', monospace;
+    transition: all 0.2s;
+}
+.rpButton:hover {
+    width: 230px;
+    height: 230px;
+    border: none;
+}
+.rpButton:active {
+    transform: scale(0.85);
+}
+
+
+.reset {
+    margin-top: 16px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+.reset:hover {
+    background-color: #d42308;
+}
